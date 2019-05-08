@@ -3,6 +3,5 @@ Python3 demo project
 
 # Runnung the app in Docker container
 ```
-$ docker build -t python_demo-image .
-$ docker run -it --rm --name python_demo-container python_demo-image
+$ docker build -t python-demo . && docker run -it --rm --name python-demo python-demo
 ```
