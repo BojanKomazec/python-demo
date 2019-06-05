@@ -3,6 +3,8 @@ import os
 
 from dotenv import load_dotenv
 from src.util.debug import printDebugInfo
+from src.class_demo import class_demo
+from src.schema2db import schema2db
 
 
 def main():
@@ -28,6 +30,9 @@ def main():
         print("file path =", file_path)
         print("file name without extension =", os.path.splitext(file_name)[0])
         print("file name without two last segments separated by '.' =", file_name.rsplit('.', 2)[0])
+
+    class_demo()
+    # schema2db()
 
 if __name__ == "__main__":
     main()

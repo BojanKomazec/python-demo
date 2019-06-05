@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  database_data:
+    driver: local
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - database_data:/var/lib/postgresql/data
+    ports:
+      - 5431:5431
+    env_file:
+    - .env
+    # environment:
+    #   POSTGRES_DB: $DB_NAME
+    #   POSTGRES_PASSWORD: 'postgres'
+    stdin_open: true
+    tty: true
+
+  python_demo:
+    depends_on:
+      - db
+    build: .
+    volumes:
+      - ./$SCHEMAS_DIR:/usr/local/schema2db/$SCHEMAS_DIR
+    env_file:
+    - .env
+    restart: on-failure
