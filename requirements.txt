@@ -1,3 +1,8 @@
 python-dotenv
 JSONSchema2DB==1.0.1
-psycopg2==2.7.2
+psycopg2
+numpy
+opencv-contrib-python
+imutils
+scikit-image
+# psycopg2==2.7.2
