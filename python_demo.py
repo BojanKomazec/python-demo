@@ -3,24 +3,33 @@ import json
 import os
 
 from dotenv import load_dotenv
+from src.chrome_extensions_demo import extract_extenson_id_demo
 from src.class_demo import class_demo
 from src.functions_demo import functions_demo
+from src.operators_demo import operators_demo
 from src.numpy_demo.demo import numpy_demo
 from src.pyimagesearch.transform import transform_example
-from src.schema2db import schema2db
+from src.types_demo import types_demo
 from src.util.debug import printDebugInfo
 
+# To include this demo we need to list JSONSchema2DB in requirements.txt and also use Python < 3.8.
+# This is because JSONSchema2DB requires psycopg2==2.7.2 (https://github.com/better/jsonschema2db/blob/master/setup.py)
+# but this psycopg2 version does not support Python 3.8 as its support was added in psycopg 2.8.4.
+# https://github.com/psycopg/psycopg2/issues/1106.
+# from src.schema2db import schema2db
 
 def main():
-    useCommandLineArgs = False
+    useCommandLineArgs = True
     if useCommandLineArgs:
         # construct the argument parse and parse the arguments
         ap = argparse.ArgumentParser()
         ap.add_argument("-i", "--image", help = "path to the image file")
         ap.add_argument("-c", "--coords", help = "comma seperated list of source points")
+        ap.add_argument("--crx", dest="crx_file_path", help = "crx file path")
         cli_args = vars(ap.parse_args())
         print(cli_args["image"])
         print(cli_args["coords"])
+        print(f'crx_file_path = {cli_args["crx_file_path"]}')
         printDebugInfo()
         # if .env does not exist, a warning is issued: UserWarning: File doesn't exist
         load_dotenv(verbose=True)
@@ -47,10 +56,15 @@ def main():
         # class_demo()
         # schema2db()
         # numpy_demo()
-        transform_example(cli_args)
+        # transform_example(cli_args)
+        # operators_demo()
+        # types_demo()
+
+        # python3 python_demo.py --crx="data/my_extension.crx"
+        extract_extenson_id_demo(cli_args["crx_file_path"])
     else:
         functions_demo()
 
-
+# https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":
     main()
