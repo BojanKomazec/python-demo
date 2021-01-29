@@ -3,7 +3,28 @@ Python3 demo project
 python
 # Running on the native dev box OS
 
-Prerequisites:
+Create a virtual environment in the project root directory (unless it has already been created):
+```
+$ virtualenv -p python3 ./venv
+```
+
+Activate the environment:
+```
+$ source ./venv/bin/activate
+```
+
+Install all requirements:
+```
+(venv) $ pip3 install -r requirements.txt --verbose
+```
+
+After finishing with work, deactivate the environment:
+```
+(venv) $ deactivate
+```
+
+
+## Prerequisites:
 
 1) OpenCV (see https://www.bojankomazec.com/2019/11/how-to-install-opencv-on-ubuntu-1804.html)
 https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/

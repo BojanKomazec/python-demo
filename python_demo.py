@@ -9,6 +9,7 @@ from src.functions_demo import functions_demo
 from src.operators_demo import operators_demo
 from src.numpy_demo.demo import numpy_demo
 from src.pyimagesearch.transform import transform_example
+from src.regular_expressions_demo import regular_expressions_demo
 from src.types_demo import types_demo
 from src.util.debug import printDebugInfo
 
@@ -19,7 +20,8 @@ from src.util.debug import printDebugInfo
 # from src.schema2db import schema2db
 
 def main():
-    useCommandLineArgs = True
+    # useCommandLineArgs = True
+    useCommandLineArgs = False
     if useCommandLineArgs:
         # construct the argument parse and parse the arguments
         ap = argparse.ArgumentParser()
@@ -58,12 +60,14 @@ def main():
         # numpy_demo()
         # transform_example(cli_args)
         # operators_demo()
+        # regular_expressions_demo()
         # types_demo()
 
         # python3 python_demo.py --crx="data/my_extension.crx"
-        extract_extenson_id_demo(cli_args["crx_file_path"])
+        # extract_extenson_id_demo(cli_args["crx_file_path"])
     else:
-        functions_demo()
+        # functions_demo()
+        regular_expressions_demo()
 
 # https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":

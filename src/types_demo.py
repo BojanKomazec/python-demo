@@ -1,4 +1,9 @@
 import string
+from enum import Enum
+
+#
+# bytes
+#
 
 def bytes_demo():
     # Python 3: indexing a bytes object returns an integer
@@ -6,11 +11,34 @@ def bytes_demo():
     print(n) # 65
     print(type(n)) # <class 'int'>
 
+#
+# bytearray
+#
+
 def bytes_to_bytearray_conversion_demo():
     b = b'test'
     ba = bytearray(b)
     print(ba) # bytearray(b'test')
     print({type(ba)}) # {<class 'bytearray'>}
+
+#
+# Enumerations
+#
+
+class Brand(Enum):
+    BRAND_A = "BrandA"
+    BRAND_B = "BrandB"
+    BRAND_C = "BrandC"
+
+def enum_demo():
+    if "BrandC" == Brand.BRAND_C.value:
+        print(f'Brand.BRAND_C.name = {Brand.BRAND_C.name}') # BRAND_C
+        print(f'Brand.BRAND_C.value = {Brand.BRAND_C.value}') # BrandC
+
+
+#
+# Strings
+#
 
 # Python strings are Unicode
 def string_conversions_demo():
@@ -47,7 +75,9 @@ def strings_demo():
     # string_conversions_demo()
     string_translations_demo()
 
+
 def types_demo():
     # bytes_demo()
-    strings_demo()
+    enum_demo()
+    # strings_demo()
     # bytes_to_bytearray_conversion_demo()
