@@ -1,3 +1,7 @@
+
+# Use shebang to indicate which version of Python interpreter should be used
+#!/usr/bin/env python3
+
 import argparse
 import json
 import os
@@ -67,7 +71,8 @@ def main():
         # extract_extenson_id_demo(cli_args["crx_file_path"])
     else:
         # functions_demo()
-        regular_expressions_demo()
+        # regular_expressions_demo()
+        numpy_demo()
 
 # https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":

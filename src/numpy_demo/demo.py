@@ -38,8 +38,65 @@ def ndarray_sum_demo():
     sum_axis_1 = arr.sum(axis = 1)
     print("sum_axis_1 = ", sum_axis_1) # [ 3.  7. 11.]
 
+def slicing_3d_array_demo():
+    # Let's create a 3D matrix by layering these 3 2D matrices one on the top of another.
+    # Matrix at index 0 is on the top.
+    #
+    # Matrix at index 0:
+    # 1 2 3
+    # 4 5 6
+    # 7 8 9
+    #
+    # Matrix at index 1:
+    # 11 22 33
+    # 44 55 66
+    # 77 88 99
+    #
+    # Matrix at index 2:
+    # 111 222 333
+    # 444 555 666
+    # 777 888 999
+    #
+    arr = [[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+           [[11, 22, 33], [44, 55, 66], [77, 88, 99]],
+           [[111, 222, 333], [444, 555, 666], [777, 888, 999]]]
+    nparr = np.array(arr)
+    print(nparr)
 
+    print(f'nparr.shape = {nparr.shape}') # (3, 3, 3)
+    print(f'nparr.shape[:2] = {nparr.shape[:2]}') # get the dimensions of the matrix
+
+    # nparr[m:r:c]
+    # m - index of 2D matrix
+    # m - index of row in that 2D matrix
+    # m - index of column in that 2D matrix
+    print(f'nparr[0, 0, 0] = {nparr[0, 0, 0]}') # 1
+    print(f'nparr[0, 0, 1] = {nparr[0, 0, 1]}') # 2
+    print(f'nparr[2, 1, 1] = {nparr[2, 1, 1]}') # 555
+
+    # If we want to get elements from all columns (entire row will be returned) we can put ':':
+    print(f'nparr[2, 1, :] = {nparr[2, 1, :]}')
+    # We can omit trailing ':':
+    print(f'nparr[2, 1] = {nparr[2, 1]}')
+
+    # If we put : for some dimension that means - all elements in that dimension
+    print(f'nparr[:, 1, 2] = {nparr[:, 1, 2]}') # all matrices, row with index 1 and column with index 2: [  6  66 666]
+    print(f'nparr[:, :, 2] = {nparr[:, :, 2]}') # all columns with index 2
+
+
+    print(f'nparr[:, 2, :] = {nparr[:, 2, :]}') # all rows with index 2
+    print(f'nparr[:, 2] = {nparr[:, 2]}') # We can omit trailing ':'
+
+    # We can apply 1D slicing syntax on each dimension of 3D matrix.
+    # 1D slicing syntax: [b:e:s]
+    # b - index of the element where to begin from
+    # e - index of the element where to stop (exclusive)
+    # s - step
+    # [:2] - elements with index 0 and 1
+    print(f'nparr[:2, :, :] = {nparr[:2, :, :]}') # matrices with index 0 and 1
+    print(f'nparr[:2] = {nparr[:2]}') # same as above
 
 def numpy_demo():
     # zeros_demo()
-    ndarray_sum_demo()
+    # ndarray_sum_demo()
+    slicing_3d_array_demo()
