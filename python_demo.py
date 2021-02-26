@@ -74,7 +74,8 @@ def main():
         # functions_demo()
         # regular_expressions_demo()
         # numpy_demo()
-        os_demo()
+        # os_demo()
+        types_demo()
 
 # https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":

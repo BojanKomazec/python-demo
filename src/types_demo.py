@@ -30,7 +30,16 @@ class Brand(Enum):
     BRAND_B = "BrandB"
     BRAND_C = "BrandC"
 
+def iterate_through_enum_demo():
+    for e in Brand:
+        print(f'name = {e.name}, value = {e.value}')
+    # Expected output:
+    # name = BRAND_A, value = BrandA
+    # name = BRAND_B, value = BrandB
+    # name = BRAND_C, value = BrandC
+
 def enum_demo():
+    iterate_through_enum_demo()
     if "BrandC" == Brand.BRAND_C.value:
         print(f'Brand.BRAND_C.name = {Brand.BRAND_C.name}') # BRAND_C
         print(f'Brand.BRAND_C.value = {Brand.BRAND_C.value}') # BrandC
@@ -75,9 +84,33 @@ def strings_demo():
     # string_conversions_demo()
     string_translations_demo()
 
+def list_append_vs_extend_demo():
+    listA = []
+    print(f'listA = {listA}')
+
+    # IndexError: list assignment index out of range
+    # listA[0] = 'Ana'
+    listA.append('Ana')
+    print(f'listA = {listA}')
+
+    listB = ['Bella', 'Cynthia']
+    print(f'listB = {listB}')
+
+    listA.append(listB)
+    print(f'listA (after appending listB) = {listA}')
+
+    listC = ['Donna', 'Emanuela']
+    print(f'listC = {listC}')
+
+    listA.extend(listC)
+    print(f'listA  (after extending with listC) = {listA}')
+
+def lists_demo():
+    list_append_vs_extend_demo()
 
 def types_demo():
     # bytes_demo()
-    enum_demo()
+    # enum_demo()
+    lists_demo()
     # strings_demo()
     # bytes_to_bytearray_conversion_demo()
