@@ -1,5 +1,12 @@
 import numpy as np
 
+def matrix_demo():
+	Y = np.arange(12).reshape(3,4)
+	print("Y = ", Y)
+	print(Y.shape)
+	print(Y.shape[0])
+	print(Y.shape[1])
+
 def zeros_demo():
     # zeros cretaes rowxcolumn matrix and fills it with zeros
     # float32 zero is in form 0.
@@ -95,6 +102,9 @@ def slicing_3d_array_demo():
     # [:2] - elements with index 0 and 1
     print(f'nparr[:2, :, :] = {nparr[:2, :, :]}') # matrices with index 0 and 1
     print(f'nparr[:2] = {nparr[:2]}') # same as above
+
+def two_arrays_to_tuples_array_demo():
+    pass
 
 def numpy_demo():
     # zeros_demo()

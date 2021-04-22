@@ -2,6 +2,10 @@ import string
 from enum import Enum
 
 #
+# arrays
+#
+
+#
 # bytes
 #
 
@@ -84,6 +88,10 @@ def strings_demo():
     # string_conversions_demo()
     string_translations_demo()
 
+#
+# Lists
+#
+
 def list_append_vs_extend_demo():
     listA = []
     print(f'listA = {listA}')
@@ -111,6 +119,19 @@ def lists_demo():
 #
 # Tuples
 #
+
+def two_arrays_to_tuples_list_demo():
+    arr1 = [1, 2, 3]
+    arr2 = [4, 5, 6]
+
+    zipped = zip(arr1, arr2)
+    print(f'type(zipped) = {type(zipped)}')
+    # type(zipped) = <class 'zip'>
+
+    list_zipped = list(zipped)
+    print(f'list_zipped = {list_zipped}')
+    # list_zipped = [(1, 4), (2, 5), (3, 6)]
+
 
 def tuple_demo():
     tuple1 = 1, 2
@@ -147,6 +168,10 @@ def tuple_demo():
     item1, *item2, item3 = tuple2
     print(f'item1 = {item1}, item2 = {item2}, item3 = {item3}')
     # item1 = 3, item2 = ['a', 'abba'], item3 = 4
+
+def tuples_demo():
+    # tuple_demo()
+    two_arrays_to_tuples_list_demo()
 
 
 #
@@ -368,9 +393,9 @@ def types_demo():
     # bytes_demo()
     # dict_demo()
     # passing_tuples_to_functions_demo()
-    passing_dictionaries_to_functions_demo()
+    # passing_dictionaries_to_functions_demo()
     # enum_demo()
     # lists_demo()
     # strings_demo()
     # bytes_to_bytearray_conversion_demo()
-    # tuple_demo()
+    tuples_demo()
