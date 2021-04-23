@@ -12,6 +12,7 @@ from src.class_demo import class_demo
 from src.functions_demo import functions_demo
 from src.operators_demo import operators_demo
 from src.os_demo import os_demo
+from src.matplotlib_demo.demo import matplotlib_demo
 from src.numpy_demo.demo import numpy_demo
 from src.pandas_demo.demo import pandas_demo
 from src.pyimagesearch.transform import transform_example
@@ -74,10 +75,11 @@ def main():
     else:
         # functions_demo()
         # regular_expressions_demo()
+        matplotlib_demo()
         # numpy_demo()
         # os_demo()
         # types_demo()
-        pandas_demo()
+        # pandas_demo()
 
 # https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":

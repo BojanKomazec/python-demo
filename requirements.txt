@@ -13,6 +13,7 @@ python-dotenv==0.15.0
 #   Python 3.8 support was added in psycopg 2.8.4. https://github.com/psycopg/psycopg2/issues/1106
 #   psycopg2==2.7.2 is the version required by JSONSchema2DB
 
+# matplotlib==3.4.1 # Requirement already satisfied
 numpy
 opencv-contrib-python
 pandas==1.2.4
