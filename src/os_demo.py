@@ -16,6 +16,18 @@ def os_getenv_demo():
     print(f'test_env_var_set_to_false = {test_env_var_set_to_false}') # False
     print(f'test_env_var_set_to_not_set_at_all = {test_env_var_set_to_not_set_at_all}') # True
 
+def file_creation_demo():
+    with open("do-not-commit.txt", "w") as file:
+        file.write("This file should not be\n")
+        file.write("added to the repository")
+
+def get_working_directory_demo():
+    print(f'Working directory = {os.getcwd()}')
+
+# TODO: create demo for:
+# os.path.join
 
 def os_demo():
-    os_getenv_demo()
+    # os_getenv_demo()
+    # file_creation_demo()
+    get_working_directory_demo()

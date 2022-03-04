@@ -7,16 +7,21 @@ import json
 import os
 
 from dotenv import load_dotenv
+from src.atexit_demo import atexit_demo
 from src.chrome_extensions_demo import extract_extenson_id_demo
 from src.class_demo import class_demo
 from src.functions_demo import functions_demo
+from src.glob_demo import glob_demo
 from src.operators_demo import operators_demo
 from src.os_demo import os_demo
 from src.numpy_demo.demo import numpy_demo
 from src.pyimagesearch.transform import transform_example
 from src.regular_expressions_demo import regular_expressions_demo
+from src.subprocess_demo import subprocess_demo
+from src.sys_demo import sys_demo
 from src.types_demo import types_demo
 from src.util.debug import printDebugInfo
+from src.variables_demo import variables_demo
 
 # To include this demo we need to list JSONSchema2DB in requirements.txt and also use Python < 3.8.
 # This is because JSONSchema2DB requires psycopg2==2.7.2 (https://github.com/better/jsonschema2db/blob/master/setup.py)
@@ -72,10 +77,15 @@ def main():
         # extract_extenson_id_demo(cli_args["crx_file_path"])
     else:
         # functions_demo()
+        # glob_demo()
         # regular_expressions_demo()
         # numpy_demo()
         # os_demo()
-        types_demo()
+        # sys_demo()
+        subprocess_demo()
+        # types_demo()
+        # atexit_demo()
+        # variables_demo()
 
 # https://stackoverflow.com/questions/419163/what-does-if-name-main-do
 if __name__ == "__main__":
