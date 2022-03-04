@@ -21,6 +21,7 @@ from src.pyimagesearch.transform import transform_example
 from src.regular_expressions_demo import regular_expressions_demo
 from src.subprocess_demo import subprocess_demo
 from src.sys_demo import sys_demo
+from src.threading_demo import threading_demo
 from src.types_demo import types_demo
 from src.util.debug import printDebugInfo
 from src.variables_demo import variables_demo
@@ -86,7 +87,8 @@ def main():
         # os_demo()
         # pandas_demo()
         # sys_demo()
-        subprocess_demo()
+        # subprocess_demo()
+        threading_demo()
         # types_demo()
         # atexit_demo()
         # variables_demo()
