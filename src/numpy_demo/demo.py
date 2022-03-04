@@ -1,5 +1,12 @@
 import numpy as np
 
+# https://numpy.org/doc/stable/reference/generated/numpy.linspace.html
+# Return evenly spaced numbers over a specified interval.
+def linspace_demo():
+    x = np.linspace(-10, 10, 100)
+    print(f'type(x) = {type(x)}')
+    print(f'x = {x}')
+
 def matrix_demo():
 	Y = np.arange(12).reshape(3,4)
 	print("Y = ", Y)
@@ -107,6 +114,7 @@ def two_arrays_to_tuples_array_demo():
     pass
 
 def numpy_demo():
+    linspace_demo()
     # zeros_demo()
     # ndarray_sum_demo()
-    slicing_3d_array_demo()
+    # slicing_3d_array_demo()

@@ -9,7 +9,7 @@ def call_bash_script_with_no_args():
     except PermissionError:
         print(f'No permissions to run {file_path}')
         # To fix this error, run:
-        # $ sudo chmod +x ./data/test.sh
+        # $ sudo chmod +x ./test_scripts/test.sh
     except:
         print(f'Unknown error occured when trying to run {file_path}')
     finally:
@@ -26,7 +26,7 @@ def call_bash_script_with_args():
     except PermissionError:
         print(f'No permissions to run {file_path}')
         # To fix this error, run:
-        # $ sudo chmod +x ./data/test.sh
+        # $ sudo chmod +x ./test_scripts/test.sh
     except:
         print(f'Unknown error occured when trying to run {file_path}')
     finally:
