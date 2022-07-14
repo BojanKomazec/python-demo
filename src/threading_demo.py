@@ -16,6 +16,7 @@ def thread_function():
 def start_thread_function_1_arg():
     name = 'Bojan'
 
+    # IMPORTANT!!!
     # This fails with error:
     # TypeError: thread_function_1_arg() takes 1 positional argument but 5 were given
     # thread = threading.Thread(target=thread_function_1_arg, args=(name))
