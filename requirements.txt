@@ -19,3 +19,4 @@ opencv-contrib-python
 pandas==1.2.4
 imutils
 scikit-image # skimage
+networkx
