@@ -30,3 +30,5 @@ def init_demo():
 
 def pandas_demo():
 	init_demo()
+
+pandas_demo()

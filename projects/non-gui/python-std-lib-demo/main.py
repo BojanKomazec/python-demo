@@ -14,12 +14,7 @@ from src.functions_demo import functions_demo
 from src.glob_demo import glob_demo
 from src.operators_demo import operators_demo
 from src.os_demo import os_demo
-from src.matplotlib_demo.demo import matplotlib_demo
-from src.numpy_demo.demo import numpy_demo
-from src.pandas_demo.demo import pandas_demo
-from src.pyimagesearch.transform import transform_example
 from src.regular_expressions_demo import regular_expressions_demo
-from src.requests_demo import requests_demo
 from src.subprocess_demo import subprocess_demo
 from src.sys_demo import sys_demo
 from src.threading_demo import threading_demo
@@ -34,17 +29,18 @@ from src.variables_demo import variables_demo
 # from src.schema2db import schema2db
 
 def main():
-    # useCommandLineArgs = True
-    useCommandLineArgs = False
+    useCommandLineArgs = True
+    # useCommandLineArgs = False
+
     if useCommandLineArgs:
         # construct the argument parse and parse the arguments
         ap = argparse.ArgumentParser()
-        ap.add_argument("-i", "--image", help = "path to the image file")
-        ap.add_argument("-c", "--coords", help = "comma seperated list of source points")
+        # ap.add_argument("-i", "--image", help = "path to the image file")
+        # ap.add_argument("-c", "--coords", help = "comma seperated list of source points")
         ap.add_argument("--crx", dest="crx_file_path", help = "crx file path")
         cli_args = vars(ap.parse_args())
-        print(cli_args["image"])
-        print(cli_args["coords"])
+        # print(cli_args["image"])
+        # print(cli_args["coords"])
         print(f'crx_file_path = {cli_args["crx_file_path"]}')
         printDebugInfo()
         # if .env does not exist, a warning is issued: UserWarning: File doesn't exist
@@ -71,23 +67,16 @@ def main():
 
         # class_demo()
         # schema2db()
-        # numpy_demo()
-        # transform_example(cli_args)
         # operators_demo()
         # regular_expressions_demo()
         # types_demo()
-
         # python3 python_demo.py --crx="data/my_extension.crx"
         # extract_extenson_id_demo(cli_args["crx_file_path"])
     else:
+        print("Not using command line arguments.\n")
         # functions_demo()
         # glob_demo()
         # regular_expressions_demo()
-        # matplotlib_demo()
-        # numpy_demo()
-        # os_demo()
-        # pandas_demo()
-        requests_demo()
         # sys_demo()
         # subprocess_demo()
         # threading_demo()

@@ -118,3 +118,5 @@ def numpy_demo():
     # zeros_demo()
     # ndarray_sum_demo()
     # slicing_3d_array_demo()
+
+numpy_demo()

@@ -50,7 +50,8 @@ def directed_graph_demo():
 	plt.show()
 
 
-
 def matplotlib_demo():
 	# plot_demo()
 	directed_graph_demo()
+
+matplotlib_demo()
