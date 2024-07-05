@@ -22,11 +22,6 @@ from src.types_demo import types_demo
 from src.util.debug import printDebugInfo
 from src.variables_demo import variables_demo
 
-# To include this demo we need to list JSONSchema2DB in requirements.txt and also use Python < 3.8.
-# This is because JSONSchema2DB requires psycopg2==2.7.2 (https://github.com/better/jsonschema2db/blob/master/setup.py)
-# but this psycopg2 version does not support Python 3.8 as its support was added in psycopg 2.8.4.
-# https://github.com/psycopg/psycopg2/issues/1106.
-# from src.schema2db import schema2db
 
 def main():
     useCommandLineArgs = True
@@ -66,7 +61,6 @@ def main():
             print("file name without two last segments separated by '.' =", file_name.rsplit('.', 2)[0])
 
         # class_demo()
-        # schema2db()
         # operators_demo()
         # regular_expressions_demo()
         # types_demo()
