@@ -20,6 +20,11 @@ Install all requirements:
 (venv) $ pip3 install -r requirements.txt --verbose
 ```
 
+Run the main file in the project:
+```
+(venv) $ python main.py
+```
+
 After finishing with work, deactivate the environment:
 ```
 (venv) $ deactivate
